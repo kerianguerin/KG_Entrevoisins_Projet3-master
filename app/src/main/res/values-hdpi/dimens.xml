@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- Toolbar -->
+    <dimen name="height_toolbar">200dp</dimen>
+
+    <!-- CardView -->
+    <dimen name="height_min_big_card">150dp</dimen>
+    <dimen name="height_min_little_card">125dp</dimen>
+
+    <!-- TextViews -->
+    <dimen name="size_text_title">24sp</dimen>
+    <dimen name="size_text_subtitle">16sp</dimen>
+    <dimen name="size_text_description">12sp</dimen>
+    <dimen name="size_text_default_margin">4dp</dimen>
+    <dimen name="size_text_double_margin">8dp</dimen>
+    <dimen name="size_text_default_padding">4dp</dimen>
+    <dimen name="size_text_double_padding">8dp</dimen>
+
+    <!-- ImageViews -->
+    <dimen name="size_img_default_margin">4dp</dimen>
+    <dimen name="size_img_double_margin">8dp</dimen>
+    <dimen name="size_img_default_padding">4dp</dimen>
+    <dimen name="size_img_double_padding">8dp</dimen>
+
+    <!-- Buttons - ImageButtons -->
+    <dimen name="size_btn_default_margin">4dp</dimen>
+    <dimen name="size_btn_double_margin">8dp</dimen>
+    <dimen name="size_btn_default_padding">4dp</dimen>
+    <dimen name="size_btn_double_padding">8dp</dimen>
+</resources>

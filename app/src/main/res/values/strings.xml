@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Entrevoisins</string>
+    <string name="tab_neighbour_title">My neighbours</string>
+    <string name="tab_favorites_title">Favorites</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis convallis dui nec pellentesque. Aenean cursus neque id eros convallis elementum. Sed scelerisque libero in quam consectetur, vitae luctus orci feugiat.</string>
+    <string name="desc_card_title">À propos de moi</string>
+    <string name="infos_card_phone_txt">+33 7 99 42 13 21</string>
+    <string name="infos_card_website_txt">www.google.com</string>
+    <string name="bonjour_je_souhaiterais_faire_de_la_marche_scandinave_pas_initi_e_je_recherce_une_ou_plusieurs_personnes_susceptibles_de_m_accompagner_j_aime_les_jeux_de_cartes_tels_la_belote_et_le_tarot">Bonjour ! Je souhaiterais faire de la marche scandinave .Pas initiée ,je recherce une ou plusieurs personnes susceptibles de m\'accompagner !j\'aime les jeux de cartes tels la belote et le tarot .</string>
+</resources>

@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>Neighbour.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #000080; font-weight: bold;}
+.s1 { color: #000000;}
+.s2 { color: #808080; font-style: italic;}
+.s3 { color: #808080; font-weight: bold; font-style: italic;}
+.s4 { color: #0000ff;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Neighbour.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span>com.openclassrooms.entrevoisins.model;
+
+<span class="s0">import </span>android.os.Parcel;
+<span class="s0">import </span>android.os.Parcelable;
+
+<span class="s0">import </span>java.util.Objects;
+
+<span class="s2">/**</span>
+ * Model object representing a Neighbour
+ */
+<span class="s0">public class </span>Neighbour <span class="s0">implements </span>Parcelable {
+
+    <span class="s2">/**</span>
+     * Identifier
+     */
+    <span class="s0">private </span>Integer id;
+
+    <span class="s2">/**</span>
+     * Full name
+     */
+    <span class="s0">private </span>String name;
+
+    <span class="s2">/**</span>
+     * Avatar
+     */
+    <span class="s0">private </span>String avatarUrl;
+
+    <span class="s2">/**</span>
+     * Favorite Status
+     */
+    <span class="s0">private boolean </span>favoriteStatus;
+
+    <span class="s2">/**</span>
+     * Constructor
+     *
+     * <span class="s3">@param </span><span class="s2">id</span>
+     * <span class="s3">@param </span><span class="s2">name</span>
+     * <span class="s3">@param </span><span class="s2">avatarUrl</span>
+     * <span class="s3">@param </span><span class="s2">favoriteStatus</span>
+     */
+    <span class="s0">public </span>Neighbour(Integer id, String name, String avatarUrl, <span class="s0">boolean </span>favoriteStatus) {
+        <span class="s0">this</span>.id = id;
+        <span class="s0">this</span>.name = name;
+        <span class="s0">this</span>.avatarUrl = avatarUrl;
+        <span class="s0">this</span>.favoriteStatus = favoriteStatus;
+    }
+
+    <span class="s0">public </span>Integer getId() {
+        <span class="s0">return </span>id;
+    }
+
+    <span class="s0">public void </span>setId(Integer id) {
+        <span class="s0">this</span>.id = id;
+    }
+
+    <span class="s0">public </span>String getName() {
+        <span class="s0">return </span>name;
+    }
+
+    <span class="s0">public void </span>setName(String name) {
+        <span class="s0">this</span>.name = name;
+    }
+
+    <span class="s0">public </span>String getAvatarUrl() {
+        <span class="s0">return </span>avatarUrl;
+    }
+
+    <span class="s0">public void </span>setAvatarUrl(String avatarUrl) {
+        <span class="s0">this</span>.avatarUrl = avatarUrl;
+    }
+
+    <span class="s0">public boolean </span>isFavoriteStatus() {
+        <span class="s0">return </span>favoriteStatus;
+    }
+
+    <span class="s0">public void </span>setFavoriteStatus(<span class="s0">boolean </span>favoriteStatus) {
+        <span class="s0">this</span>.favoriteStatus = favoriteStatus;
+    }
+
+    @Override
+    <span class="s0">public boolean </span>equals(Object o) {
+        <span class="s0">if </span>(<span class="s0">this </span>== o) <span class="s0">return true</span>;
+        <span class="s0">if </span>(o == <span class="s0">null </span>|| getClass() != o.getClass()) <span class="s0">return false</span>;
+        Neighbour neighbour = (Neighbour) o;
+        <span class="s0">return </span>Objects.equals(id, neighbour.id);
+    }
+
+    @Override
+    <span class="s0">public int </span>hashCode() {
+        <span class="s0">return </span>Objects.hash(id);
+    }
+
+    <span class="s0">public static final </span>Parcelable.Creator&lt;Neighbour&gt; CREATOR = <span class="s0">new </span>Parcelable.Creator&lt;Neighbour&gt;() {
+        <span class="s0">public </span>Neighbour createFromParcel(Parcel in) {
+            <span class="s0">return new </span>Neighbour(in);
+        }
+
+        <span class="s0">public </span>Neighbour[] newArray(<span class="s0">int </span>size) {
+            <span class="s0">return new </span>Neighbour[size];
+        }
+    };
+
+    <span class="s0">private </span>Neighbour(Parcel in) {
+        id = in.readInt();
+        name = in.readString();
+        avatarUrl = in.readString();
+        favoriteStatus = in.readByte() != <span class="s4">0</span>;
+    }
+
+    @Override
+    <span class="s0">public int </span>describeContents() {
+        <span class="s0">return </span><span class="s4">0</span>;
+    }
+
+    @Override
+    <span class="s0">public void </span>writeToParcel(Parcel dest, <span class="s0">int </span>flags) {
+        dest.writeInt(id);
+        dest.writeString(name);
+        dest.writeString(avatarUrl);
+        dest.writeByte((<span class="s0">byte</span>) (favoriteStatus ? <span class="s4">1 </span>: <span class="s4">0</span>));
+    }
+}
+</pre>
+</body>
+</html>

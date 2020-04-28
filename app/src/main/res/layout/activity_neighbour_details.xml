@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_neighbours_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.neighbour_details.NeighbourDetailsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_neighbour_details_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_toolbar"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/activity_neighbour_details_toolbar_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:scaleType="centerCrop" />
+
+            <ImageButton
+                android:id="@+id/activity_neighbour_details_toolbar_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/size_btn_default_margin"
+                android:layout_marginTop="@dimen/size_btn_default_margin"
+                android:background="@null"
+                android:padding="@dimen/size_btn_default_margin"
+                android:src="@drawable/ic_arrow_back_24dp" />
+
+            <TextView
+                android:id="@+id/activity_neighbour_details_toolbar_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/size_text_default_margin"
+                android:layout_marginBottom="@dimen/size_text_double_margin"
+                android:padding="@dimen/size_text_default_padding"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/size_text_title"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/activity_neighbour_details_fav_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_btn_double_margin"
+        android:backgroundTint="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/activity_neighbour_details_infos_card"
+        app:layout_constraintEnd_toEndOf="@+id/activity_neighbour_details_toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/activity_neighbour_details_toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_neighbour_details_infos_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        android:minHeight="@dimen/height_min_big_card"
+        app:layout_constraintTop_toBottomOf="@id/activity_neighbour_details_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/infos_card_title_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="@dimen/size_text_default_margin"
+                android:padding="@dimen/size_text_default_padding"
+                android:textSize="@dimen/size_text_subtitle"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/infos_card_address_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_title_txt"
+                android:layout_marginStart="@dimen/size_img_default_margin"
+                android:layout_marginTop="@dimen/size_img_default_margin"
+                android:layout_marginBottom="@dimen/size_img_default_margin"
+                android:padding="@dimen/size_img_default_padding"
+                android:src="@drawable/ic_address_24dp" />
+
+            <TextView
+                android:id="@+id/infos_card_address_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_title_txt"
+                android:layout_marginTop="@dimen/size_text_default_margin"
+                android:layout_marginEnd="@dimen/size_text_default_margin"
+                android:layout_marginBottom="@dimen/size_text_default_margin"
+                android:layout_toEndOf="@id/infos_card_address_img"
+                android:padding="@dimen/size_text_default_padding"
+                android:text="Thueyts"
+                android:textSize="@dimen/size_text_description" />
+
+            <ImageView
+                android:id="@+id/infos_card_phone_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_address_txt"
+                android:layout_marginStart="@dimen/size_img_default_margin"
+                android:layout_marginTop="@dimen/size_img_default_margin"
+                android:layout_marginBottom="@dimen/size_img_default_margin"
+                android:padding="@dimen/size_img_default_padding"
+                android:src="@drawable/ic_phone_24dp" />
+
+            <TextView
+                android:id="@+id/infos_card_phone_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_address_txt"
+                android:layout_marginTop="@dimen/size_text_default_margin"
+                android:layout_marginEnd="@dimen/size_text_default_margin"
+                android:layout_marginBottom="@dimen/size_text_default_margin"
+                android:layout_toEndOf="@id/infos_card_phone_img"
+                android:padding="@dimen/size_text_default_padding"
+                android:text="0768091913"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/infos_card_website_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_phone_txt"
+                android:layout_marginStart="@dimen/size_img_default_margin"
+                android:layout_marginTop="@dimen/size_img_default_margin"
+                android:layout_marginBottom="@dimen/size_img_default_margin"
+                android:padding="@dimen/size_img_default_padding"
+                android:src="@drawable/ic_website_24dp" />
+
+            <TextView
+                android:id="@+id/infos_card_website_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infos_card_phone_txt"
+                android:layout_marginTop="@dimen/size_text_default_margin"
+                android:layout_marginEnd="@dimen/size_text_default_margin"
+                android:layout_marginBottom="@dimen/size_text_default_margin"
+                android:layout_toEndOf="@id/infos_card_website_img"
+                android:padding="@dimen/size_text_default_padding"
+                android:text="www.facebook.com/Caroline"
+                android:textSize="@dimen/size_text_description" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/activity_neighbour_details_desc_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/mtrl_card_spacing"
+        android:layout_marginTop="@dimen/mtrl_card_spacing"
+        android:layout_marginRight="@dimen/mtrl_card_spacing"
+        android:minHeight="@dimen/height_min_little_card"
+        app:layout_constraintTop_toBottomOf="@id/activity_neighbour_details_infos_card">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/desc_card_title_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_text_default_margin"
+                android:padding="@dimen/size_text_default_padding"
+                android:text="@string/desc_card_title"
+                android:textSize="@dimen/size_text_subtitle"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/des_card_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_text_default_margin"
+                android:padding="@dimen/size_text_default_padding"
+                android:text="@string/bonjour_je_souhaiterais_faire_de_la_marche_scandinave_pas_initi_e_je_recherce_une_ou_plusieurs_personnes_susceptibles_de_m_accompagner_j_aime_les_jeux_de_cartes_tels_la_belote_et_le_tarot"
+                android:textSize="@dimen/size_text_description" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
